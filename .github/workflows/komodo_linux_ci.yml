@@ -36,7 +36,7 @@ jobs:
         run: |
           # flag for some CC tests transactions - so DO NOT USE THIS CI ARTIFACTS IN PRODUCTION!!!
           CONFIGURE_FLAGS='CPPFLAGS=-DTESTMODE' ./zcutil/build.sh -j$(nproc)
-          tar -czvf komodo-linux.tar.gz src/marmarad src/marmara-cli
+          tar -czvf marmara-linux.tar.gz src/marmarad src/marmara-cli
       - name: Upload marmara-linux.tar.gz as artifact
         uses: actions/upload-artifact@v1
         with:
